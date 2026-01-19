@@ -52,7 +52,7 @@ function App() {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Левая колонка - Настройки */}
           <div className="order-2 lg:order-1">
             <SettingsPanel
@@ -64,11 +64,11 @@ function App() {
           {/* Правая колонка - Превью */}
           <div className="order-1 lg:order-2">
             <div className="lg:sticky lg:top-8 space-y-6">
+              {/* Заголовок превью на том же уровне что и заголовок настроек */}
+              <h2 className="text-xl font-semibold text-slate-100 mb-4">{t.previewTitle}</h2>
+
               {/* Превью QR-кода */}
               <div className="glass rounded-2xl p-8">
-                <h2 className="text-xl font-semibold text-slate-100 mb-6 text-center">
-                  {t.previewTitle}
-                </h2>
                 <QRCodePreview settings={settings} />
               </div>
 
